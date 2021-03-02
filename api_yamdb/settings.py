@@ -1,16 +1,8 @@
 import os
 import environ
-import sentry_sdk
-
-from sentry_sdk.integrations.django import DjangoIntegration
 
 env = environ.Env()
 environ.Env.read_env()
-
-sentry_sdk.init(
-    dsn="https://7e7d4e3403034c53bfc90ed691c351ec@o512084.ingest.sentry.io/5610680",
-    integrations=[DjangoIntegration()],
-)
 
 from datetime import timedelta
 
