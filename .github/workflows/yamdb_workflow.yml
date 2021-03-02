@@ -24,8 +24,6 @@ jobs:
 
     - name: Test with pytest
       run: |
-        export DEBUG=${{ secrets.DEBUG }}
-        export DJANGO_ALLOWED_HOSTS=${{ secrets.DJANGO_ALLOWED_HOSTS }}
         export DEFAULT_FROM_EMAIL=${{ secrets.DEFAULT_FROM_EMAIL }}
         export DB_ENGINE=${{ secrets.DB_ENGINE }}
         export DB_NAME=${{ secrets.DB_NAME }}
