@@ -108,7 +108,6 @@ jobs:
      with:
        host: ${{ secrets.CLOUD_HOST }}
        username: ${{ secrets.CLOUD_USER }}
-       port: ${{ secrets.CLOUD_PORT }}
        key: ${{ secrets.SSH_KEY }}
        passphrase: ${{ secrets.PASSPHRASE }}
        script: |
