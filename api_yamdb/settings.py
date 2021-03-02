@@ -25,7 +25,7 @@ SECRET_KEY = 'inz_cu#kp$9d*-i9(ftaq@$(@08hmgix7a-(5ov3gn*u96x6&='
 
 DEBUG = os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS').split(, )
+ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS').split(', ')
 
 # Application definition
 INSTALLED_APPS = [
