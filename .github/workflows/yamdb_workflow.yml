@@ -154,9 +154,9 @@ jobs:
        key: ${{ secrets.SSH_KEY }}
        passphrase: ${{ secrets.PASSPHRASE }}
        script: |
-         docker-compose exec -T web python3 manage.py collectstatic --noinput
-         docker-compose exec -T web python3 manage.py migrate --noinput
-         docker-compose exec -T web python3 manage.py loaddata /usr/src/web/fixture.json
+         sudo docker-compose exec -T web python3 manage.py collectstatic --noinput
+         sudo docker-compose exec -T web python3 manage.py migrate --noinput
+         sudo docker-compose exec -T web python3 manage.py loaddata /usr/src/web/fixture.json
 
 
   send_message:
