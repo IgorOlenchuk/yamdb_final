@@ -139,9 +139,8 @@ jobs:
        passphrase: ${{ secrets.PASSPHRASE }}
        script: |
          sudo docker-compose exec -T web python3 manage.py collectstatic --noinput
-         sudo docker-compose exec -T web python3 manage.py makemigrations --merge
          sudo docker-compose exec -T web python3 manage.py migrate --noinput
-         sudo docker-compose exec -T web python3 manage.py loaddata /usr/src/web/fixture.json
+
   send_message:
     runs-on: ubuntu-latest
     needs: deploy
